@@ -1,0 +1,16 @@
+<br>
+<button type="button" [routerLink]="['/studentform']">Add Student</button>
+<table border="1">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Action</th>
+  </tr>
+  <tr *ngFor="let student of StudentData">
+    <td> {{student.sc__sc_employees4__studentid5c14998f34841d67f32c3a10}} </td>
+    <td> <a [routerLink]="['studentdetails', student.id]"> {{student.sc__sc_employees4__name5c14999034841d68042c37a4}}
+      </a></td>
+    <td> <button type="button" [routerLink]="['studentform', student.id]">Edit</button>
+      <button type="button" (click)="delStd(student)">Delete</button> </td>
+  </tr>
+</table>
